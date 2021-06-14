@@ -34,7 +34,7 @@ def preprocess_text(text):
     stop_words = get_stop_words()
     chars = get_characters()
     chars = list(chars)
-    chars += [';', ',', '&', '?', '.']
+    chars += [';', ',', '&', '?', '.', '%']
     for each in chars:
         text = text.replace(each, ' ')
     tokens = tokenizer.tokenize_words(text)
