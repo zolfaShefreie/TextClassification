@@ -5,7 +5,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from utility import get_df, TRAIN_PATH, TEST_PATH
 
 
-if __name__ == "___Main__":
+if __name__ == '__main__':
     train_df = get_df(TRAIN_PATH)
     train_x_df = train_df[['text']]
     train_y_df = train_df['category']
@@ -20,6 +20,7 @@ if __name__ == "___Main__":
     count_vect = CountVectorizer(max_features=500)
     count_vect.fit(merged_df.text)
     train_counts = count_vect.transform(train_df.text)
+    print(type(train_counts))
 
     print(count_vect.get_feature_names())
 

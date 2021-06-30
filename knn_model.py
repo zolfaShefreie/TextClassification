@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from utility import get_df, TRAIN_PATH, TEST_PATH
 
 
-if __name__ == "___Main__":
+if __name__ == '__main__':
 
     train_df = get_df(TRAIN_PATH)
     le = preprocessing.LabelEncoder()
